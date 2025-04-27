@@ -1,4 +1,3 @@
-
 import React from 'react';
 import LoginForm from '../components/auth/LoginForm';
 import { useAuth } from '../context/AuthContext';
@@ -13,13 +12,13 @@ const Login = () => {
   }
   
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md">
         <div className="text-center mb-10">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-telehealth-primary to-telehealth-secondary bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold text-white">
             TeleHealth Connect
           </h1>
-          <p className="mt-3 text-gray-500">
+          <p className="mt-3 text-gray-400">
             Access quality healthcare from anywhere
           </p>
         </div>
@@ -30,3 +29,4 @@ const Login = () => {
 };
 
 export default Login;
+
