@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -26,7 +25,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900 border-b border-gray-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
       <div className="px-4 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2">
@@ -44,36 +43,36 @@ const Header = () => {
                       {user?.profilePicture ? (
                         <AvatarImage src={user.profilePicture} alt={user.name} />
                       ) : (
-                        <AvatarFallback className="bg-gray-800 text-gray-200">
+                        <AvatarFallback className="bg-gray-100 text-gray-800">
                           {getInitials(user?.name || '')}
                         </AvatarFallback>
                       )}
                     </Avatar>
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="w-56 bg-gray-900 border border-gray-800">
-                  <DropdownMenuLabel className="text-gray-300">My Account</DropdownMenuLabel>
-                  <DropdownMenuSeparator className="bg-gray-800" />
+                <DropdownMenuContent align="end" className="w-56 bg-white border border-gray-200">
+                  <DropdownMenuLabel className="text-gray-700">My Account</DropdownMenuLabel>
+                  <DropdownMenuSeparator className="bg-gray-200" />
                   <DropdownMenuItem asChild>
-                    <Link to="/dashboard" className="text-gray-300 hover:text-white">Dashboard</Link>
+                    <Link to="/dashboard" className="text-gray-700 hover:text-gray-900">Dashboard</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/profile" className="text-gray-300 hover:text-white">Profile</Link>
+                    <Link to="/profile" className="text-gray-700 hover:text-gray-900">Profile</Link>
                   </DropdownMenuItem>
-                  <DropdownMenuSeparator className="bg-gray-800" />
-                  <DropdownMenuItem onClick={logout} className="text-red-400 hover:text-red-300">
+                  <DropdownMenuSeparator className="bg-gray-200" />
+                  <DropdownMenuItem onClick={logout} className="text-red-600 hover:text-red-700">
                     Log Out
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
               <Link to="/login">
-                <Button variant="ghost" className="text-gray-300 hover:text-white">
+                <Button variant="ghost" className="text-gray-700 hover:text-gray-900">
                   Log In
                 </Button>
               </Link>
             )}
-            <Button variant="ghost" className="md:hidden text-gray-300 hover:text-white">
+            <Button variant="ghost" className="md:hidden text-gray-700 hover:text-gray-900">
               <Menu className="h-6 w-6" />
             </Button>
           </div>
